@@ -11,11 +11,18 @@ let randomIndex;
 let animating = false;
 let button;
 let ink;
+var msg = new SpeechSynthesisUtterance();
+var voices = window.speechSynthesis.getVoices();
+  msg.volume = 1; // From 0 to 1
+  msg.rate = .5; // From 0.1 to 10
+  msg.pitch = 0; // From 0 to 2
+  //msg.text = "hello there";
+  //speechSynthesis.speak(msg); this plays the message
 
 function preload(){
 
-	let n = int(random(0, 6));
-	ink = loadImage("assets/IMG_" + n + ".jpg")
+	let n = int(random(1, 20));
+	ink = loadImage("assets/img " + n + ".png")
 }
 
 function setup() {
@@ -30,7 +37,6 @@ function setup() {
 	//after 1 sec, it will call the function the change the backgound color
 	//set Timeout(changeBackground, 1000);
 	//1000 = 1 second 
-	preload();
 
 }
 
@@ -51,7 +57,9 @@ function randomizer(){
 		background(random(200, 255));
 		randomIndex = int(random(phrase.length));
 		text(phrase[randomIndex], 50, 50);
-		//text(hats[randomIndex].type + " which is colored " + hats[randomIndex].color, 50, 50);
+  		msg.text = phrase[randomIndex];
+  		//speechSynthesis.speak(msg); 
+		speechSynthesis.speak(phrase[randomIndex]); 
 		image(ink, width/2, height/2)
 		
 		phrase.splice(randomIndex,1);
