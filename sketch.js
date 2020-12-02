@@ -37,9 +37,7 @@ function setup() {
 	//after 1 sec, it will call the function the change the backgound color
 	//set Timeout(changeBackground, 1000);
 	//1000 = 1 second 
-
 }
-
 
 function draw() {
 
@@ -58,8 +56,8 @@ function randomizer(){
 		randomIndex = int(random(phrase.length));
 		text(phrase[randomIndex], 50, 50);
   		msg.text = phrase[randomIndex];
-  		//speechSynthesis.speak(msg); 
-		speechSynthesis.speak(phrase[randomIndex]); 
+  		speechSynthesis.speak(msg); 
+		//speechSynthesis.speak(phrase[randomIndex]); 
 		image(ink, width/2, height/2)
 		
 		phrase.splice(randomIndex,1);
