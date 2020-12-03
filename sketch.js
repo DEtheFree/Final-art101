@@ -11,7 +11,7 @@ let randomIndex;
 let animating = false;
 let button;
 let ink;
-let n = int(random(1, 20));
+//let n = int(random(1, 20));
 var msg = new SpeechSynthesisUtterance();
 var voices = window.speechSynthesis.getVoices();
   msg.volume = 1; // From 0 to 1
@@ -22,7 +22,7 @@ var voices = window.speechSynthesis.getVoices();
 
 function preload(){
 
-	//let n = int(random(1, 20));
+	let n = int(random(1, 20));
 	ink = loadImage("assets/img " + n + ".png")
 }
 
