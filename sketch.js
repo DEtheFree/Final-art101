@@ -10,8 +10,7 @@ let phrase = ["So what do you see here"
 let randomIndex;
 let animating = false;
 let button;
-let ink;
-//let n = int(random(1, 20));
+let ink = [];
 var msg = new SpeechSynthesisUtterance();
 var voices = window.speechSynthesis.getVoices();
   msg.volume = 1; // From 0 to 1
@@ -22,8 +21,10 @@ var voices = window.speechSynthesis.getVoices();
 
 function preload(){
 
-	let n = int(random(1, 20));
-	ink = loadImage("assets/img " + n + ".png")
+	for (let i = 0; i <= 20; i++){
+		ink[i] = loadImage("assets/img " + n + ".png")
+	}
+	
 }
 
 function setup() {
