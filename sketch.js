@@ -29,8 +29,8 @@ var voices = window.speechSynthesis.getVoices();
   msg.volume = 1; // From 0 to 1
   msg.rate = .5; // From 0.1 to 10
   msg.pitch = 0; // From 0 to 2
-  //msg.text = "hello there";
-  //speechSynthesis.speak(msg); this plays the message
+  msg.text = "hello there";
+  speechSynthesis.speak(msg); this plays the message
 
 function preload(){
 
@@ -45,8 +45,8 @@ function setup() {
   background(220);
   textSize(26);
   imageMode(CENTER);
-  msg.text = "I'm going to show you a series of ink bots. And I'd like you to tell me what you think. This will only take a minute of your time.";
-  speechSynthesis.speak(msg);
+  //msg.text = "I'm going to show you a series of ink bots. And I'd like you to tell me what you think. This will only take a minute of your time.";
+  //speechSynthesis.speak(msg);
 
 	button = createButton("View Blots");
 	button.mousePressed(buttonPressed);
