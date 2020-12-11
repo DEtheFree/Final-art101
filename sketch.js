@@ -22,7 +22,7 @@ var voices = window.speechSynthesis.getVoices();
 function preload(){
 
 	for (let i = 0; i <= 20; i++){
-		ink[i] = loadImage("assets/img " + n + ".png")
+		ink[i] = loadImage("assets/img " + i + ".png")
 	}
 	
 }
