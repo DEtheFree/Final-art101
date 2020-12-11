@@ -29,8 +29,8 @@ var voices = window.speechSynthesis.getVoices();
   msg.volume = 1; // From 0 to 1
   msg.rate = .5; // From 0.1 to 10
   msg.pitch = 0; // From 0 to 2
-  msg.text = "hello there";
-  speechSynthesis.speak(msg); 
+  // msg.text = "hello there";
+  // speechSynthesis.speak(msg); 
 
 function preload(){
 
@@ -60,7 +60,7 @@ function setup() {
 function draw() {
 
 	if(animating == true){
-		//square(random(width), random(height), random(50, 200))
+		square(random(width), random(height), random(50, 200))
 		clear();
 		image(ink[imageCounter], width/2, height/2);
 
@@ -95,5 +95,5 @@ function randomizer(){
 function buttonPressed(){
 
 	animating = true;
-	setTimeout(randomizer, 2000);
+	setTimeout(randomizer, 1000);
 }
