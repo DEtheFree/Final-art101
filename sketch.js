@@ -1,6 +1,6 @@
 let phrase = ["So what do you see here"
 ,"Very Good, Now this one"
-,"How about this one"
+,"How about this one, "
 ,"And here?"
 ,"Do you see something in this one?"
 ,"How about here"
@@ -8,15 +8,15 @@ let phrase = ["So what do you see here"
 ,"You can take your time with this one"
 ,"Ok, and here"
 ,"Now tell me what does this looks like"
-,"Take a look at this one"
+,"Take a look at this one, and tell me what you see"
 ,"Does this one look like something"
 ,"Remember that these are only just ink blots"
 ,"What do this one look like"
 ,"There are no right or wrong answers here"
 ,"And how about this one"
-,"Is there anything here that look fimiliar?"
+,"Is there anything here that look familiar?"
 ,"This one. I'm not entirely sure what this even is."
-,"As a computer, I have access all of the world information. Yet, I don't know what I'm seeing."
+,"As a computer, I have access to all of the worlds information. Yet, I don't know what I am looking at."
 ,"Ok, Let me make sure that I heard you right, did you just say the warm welcoming hand of Satan?"];
 
 let imageCounter;
@@ -45,7 +45,8 @@ function setup() {
   background(220);
   textSize(26);
   imageMode(CENTER);
-
+  msg.text = "I'm going to show you a series of ink bots. And I'd like you to tell me what you think. This will only take a minute of your time.";
+  speechSynthesis.speak(msg);
 
 	button = createButton("View Blots");
 	button.mousePressed(buttonPressed);
