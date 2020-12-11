@@ -19,6 +19,7 @@ let phrase = ["So what do you see here"
 ,"As a computer, I have access all of the world information. Yet, I don't know what I'm seeing."
 ,"Ok, Let me make sure that I heard you right, did you just say the warm welcoming hand of Satan?"];
 
+let imageCounter;
 let randomIndex;
 let animating = false;
 let button;
@@ -51,7 +52,7 @@ function setup() {
 	//after 1 sec, it will call the function the change the backgound color
 	//set Timeout(changeBackground, 1000);
 	//1000 = 1 second 
-	console.log(ink);
+	//console.log(ink);
 }
 
 function draw() {
@@ -77,11 +78,11 @@ function randomizer(){
 		background(random(200, 255));
 		randomIndex = int(random(phrase.length));
 		text(phrase[randomIndex], width/2, 50);
-		image(ink, width/2, height/2)
+		image(random(ink), width/2, height/2)
+		phrase.splice(randomIndex,1);
   		msg.text = phrase[randomIndex];
   		speechSynthesis.speak(msg); 
 		//speechSynthesis.speak(phrase[randomIndex]); 
-		phrase.splice(randomIndex,1);
 	} else {
 		background(random(200,255));
 		text("There are no more blots to view", width/2, 50);
