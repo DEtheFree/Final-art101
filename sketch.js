@@ -30,7 +30,7 @@ var voices = window.speechSynthesis.getVoices();
   msg.rate = .5; // From 0.1 to 10
   msg.pitch = 0; // From 0 to 2
   msg.text = "hello there";
-  speechSynthesis.speak(msg); this plays the message
+  speechSynthesis.speak(msg); 
 
 function preload(){
 
