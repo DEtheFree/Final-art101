@@ -6,10 +6,18 @@ canvas {
 	display: block;
 
 	margin: 50px auto 50px auto;
-
+}
 .h1 {
   font-style: "Times";
   padding: 20px 0px 10px 0px;
   text-align: center;
   font-size: 30px;
+}
+.Button {
+	padding: 20px;
+	background-color: #000000;
+	font-size: 16px;
+	color: #ffffff;
+	transition-duration: 0.4s;
+	text-align: center;
 }

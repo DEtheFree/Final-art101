@@ -50,6 +50,7 @@ function setup() {
 
 	button = createButton("View Blots");
 	button.mousePressed(buttonPressed);
+	button.class("Button");
 	//after 1 sec, it will call the function the change the backgound color
 	//set Timeout(changeBackground, 1000);
 	//1000 = 1 second 
