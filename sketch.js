@@ -33,7 +33,7 @@ var voices = window.speechSynthesis.getVoices();
 
 function preload(){
 
-	for (let i = 0; i <= 20; i++){
+	for (let i = 1; i <= 20; i++){
 		ink[i] = loadImage("assets/img_" + i + ".png")
 	}
 	
